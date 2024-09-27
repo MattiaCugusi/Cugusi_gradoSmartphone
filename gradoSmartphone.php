@@ -10,23 +10,35 @@
 <?php
 
    $modello = "Iphone 16";
-   $grado = "b";
+   $grado = "y";
+   $cont = 0;
 
    switch($grado){
 
        case "a": 
-        echo "<p>$modello perfetto, pari al nuovo </p>";
+        echo "<h2>$modello perfetto, pari al nuovo </h2>";
+        $cont++;
         break;
 
        case "b":
-        echo "<p>$modello in ottime condizioni";
+        echo "<h2>$modello in ottime condizioni</h2>";
+        $cont++;
         break;
 
        case "c":
-        echo "<p>$modello con graffi e/o segni di usura</p>";
+        echo "<h2>$modello con graffi e/o segni di usura</h2>";
+        $cont++;
+        break;
 
+        
 
    }
+    
+   if ($cont == 0) {
+    echo "<h2 style='color: red';>errore: grado non riconosciuto";
+   }
+
+   
 
 
 
